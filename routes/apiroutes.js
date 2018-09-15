@@ -2,16 +2,16 @@
 const express      = require('express');
 const router       = express.Router();
 const Celebrity    = require('../models/Celebrity');
-const Movie        = require('../models/Movie');
+const Item        = require('../models/Item');
 
 
 
 
-router.get('/movies', (req, res, next) => {
-    Movie.find()
-    .then((listOfMovies)=>{
+router.get('/items', (req, res, next) => {
+    Item.find()
+    .then((listOfItems)=>{
 
-        res.json(listOfMovies)
+        res.json(listOfItems)
 
     })
     .catch((err)=>{
@@ -21,9 +21,9 @@ router.get('/movies', (req, res, next) => {
 
 
 
-router.post('/movies/create', (req, res, next)=>{
+router.post('/items/create', (req, res, next)=>{
 
-    Movie.create({
+    Item.create({
         title: req.body.title,
         genre: req.body.genre,
         plot: req.body.plot,

@@ -1,0 +1,39 @@
+
+
+{{#each theList}}
+
+<div>
+
+  <a href="/items/{{this._id}}">
+<h3>{{this.name}}</h3>
+  </a>
+
+<img src="{{this.imgPath}}">
+
+<br>
+
+<h2>Description: {{this.description}}</h2>
+
+    <img src="{{this.image}}">
+
+<br>
+
+<p>
+  Price: 
+${{this.price}}.00
+</p>
+
+
+   <form action="/items/delete/{{this._id}}" method="POST">
+       <button>Delete This Menu Item</button>
+   </form>
+
+<hr>
+
+</div>
+
+{{/each}}
+
+        <a href="/items/new">
+            <button>Add a New Menu Item</button>
+        </a>

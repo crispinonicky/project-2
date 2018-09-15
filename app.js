@@ -138,8 +138,8 @@ app.use('/', index);
 const celebrityroutesFile = require('./routes/celebrities');
 app.use('/', celebrityroutesFile);
 
-const movieroutesFile = require('./routes/movies');
-app.use('/', movieroutesFile);
+const itemroutesFile = require('./routes/items');
+app.use('/', itemroutesFile);
 
 const authRoutes = require('./routes/auth-routes');
 app.use('/', authRoutes);

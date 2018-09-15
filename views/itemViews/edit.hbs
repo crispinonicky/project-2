@@ -1,0 +1,44 @@
+<h1>
+Edit {{theItem.title}}
+</h1>
+
+
+<form action="/items/update/{{theItem._id}}" method="POST" enctype="multipart/form-data">
+
+<label for"">Name: </label>
+<input type="text" name="name" value="{{theItem.name}}">
+
+<label>Image: </label>
+<input type="file" name="photo" value="{{theItem.imgPath}}">
+
+<label for"">Description: </label>
+<input type="text" name="description" value="{{theItem.description}}">
+{{!-- 
+<label for"">Ingredients: </label>
+<input type="text" name="ingredients" value="{{theItem.ingredients}}">
+ --}}
+<label for"">Price: </label>
+<input type="number" name="price" value="{{theItem.price}}">
+
+<button>Submit</button>
+
+
+</form>
+{{!-- 
+    <label for="">Title: </label>
+    <input type="text" name="title" value="{{theItem.title}}">
+
+    <label for="">Genre: </label>
+    <input type="text" name="genre" value="{{theItem.genre}}">
+
+    <label for="">Plot: </label>
+    <input type="text" name="plot" value="{{theItem.plot}}">
+
+    <label>Image: </label>
+    <input type="file" name="photo">
+
+    <button>Submit</button>
+
+
+
+</form> --}}
