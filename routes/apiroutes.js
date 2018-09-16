@@ -1,8 +1,8 @@
 
 const express      = require('express');
 const router       = express.Router();
-const Celebrity    = require('../models/Celebrity');
-const Item        = require('../models/Item');
+const Order        = require('../models/Order');
+const Item         = require('../models/Item');
 
 
 

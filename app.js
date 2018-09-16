@@ -10,8 +10,8 @@ const logger        = require('morgan');
 const path          = require('path');
 const flash         = require("connect-flash");
 
-
-const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
+const ensureLogin = require("connect-ensure-login");
+// const GoogleStrategy = require("passport-google-oauth").OAuth2Strategy;
 
 
 const session       = require("express-session");
@@ -135,8 +135,8 @@ app.locals.title = 'Express - Generated with IronGenerator';
 const index = require('./routes/index');
 app.use('/', index);
 
-const celebrityroutesFile = require('./routes/celebrities');
-app.use('/', celebrityroutesFile);
+const orderroutesFile = require('./routes/orders');
+app.use('/', orderroutesFile);
 
 const itemroutesFile = require('./routes/items');
 app.use('/', itemroutesFile);
@@ -147,6 +147,9 @@ app.use('/', authRoutes);
 const charactersroutesFile = require('./routes/characters');
 app.use('/', charactersroutesFile);
 
+authRoutes.get("/checkout", ensureLogin.ensureLoggedIn(), (req, res) => {
+  res.render("checkout", { user: req.user });
+});
 
 module.exports = app;
 
