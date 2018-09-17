@@ -65,7 +65,7 @@ router.get("/signup", (req, res, next) => {
     })
   });
 
-  router.get('/profile' , ensureLogin.ensureLoggedIn('/login'),(req, res, next)=>{
+  router.get('/profiles' , ensureLogin.ensureLoggedIn('/login'),(req, res, next)=>{
     console.log(req.user);
     res.render('userViews/profile', {message: req.flash('success'), theUser: req.user})
   })

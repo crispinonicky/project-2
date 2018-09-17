@@ -128,7 +128,7 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 
 // default value for title local
-app.locals.title = 'Express - Generated with IronGenerator';
+app.locals.title = 'Mario\'s Italian Restaurant';
 
 
 
@@ -146,6 +146,15 @@ app.use('/', authRoutes);
 
 const charactersroutesFile = require('./routes/characters');
 app.use('/', charactersroutesFile);
+
+const profileRoutes = require('./routes/profiles');
+app.use('/', profileRoutes);
+
+const checkoutRoutes = require('./routes/orders');
+app.use('/', checkoutRoutes);
+
+const reviewRoutes = require('./routes/reviews');
+app.use('/', reviewRoutes);
 
 authRoutes.get("/checkout", ensureLogin.ensureLoggedIn(), (req, res) => {
   res.render("checkout", { user: req.user });

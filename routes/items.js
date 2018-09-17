@@ -75,7 +75,9 @@ router.get('/items/edit/:itemID', (req, res, next)=>{
 
 })
 
-router.post('/items/update/:itemID',uploadCloud.single('photo'), (req, res, next)=>{
+// console.log(item.updated_at)
+
+router.post('/items/update/:itemID', uploadCloud.single('photo'), (req, res, next)=>{
   Item.findByIdAndUpdate(req.params.itemID, {
     name: req.body.name,
     imgPath: req.file.url,
