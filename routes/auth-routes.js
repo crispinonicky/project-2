@@ -27,6 +27,7 @@ router.get("/signup", (req, res, next) => {
     const email = req.body.email;
     const firstname = req.body.firstname;
     const lastname = req.body.lastname;
+    const address = req.body.address;
   
     if (username === "" || password === "") {
       req.flash('error', 'please specify a username and password to sign up')
@@ -49,7 +50,8 @@ router.get("/signup", (req, res, next) => {
           password: hashPass,
           email: email,
           firstname: firstname,
-          lastname: lastname
+          lastname: lastname,
+          address: address,
       })
       .then((response)=>{
         res.redirect("/");
@@ -63,6 +65,10 @@ router.get("/signup", (req, res, next) => {
     })
   });
 
+  router.get('/profile' , ensureLogin.ensureLoggedIn('/login'),(req, res, next)=>{
+    console.log(req.user);
+    res.render('userViews/profile', {message: req.flash('success'), theUser: req.user})
+  })
 
   router.get('/login', (req, res, next)=>{
       res.render('userViews/login', {message: req.flash('error')})

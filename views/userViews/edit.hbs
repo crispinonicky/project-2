@@ -1,6 +1,10 @@
-<h2>Signup</h2>
+<h1>
+Edit Your Profile
+</h1>
 
-<form action="/signup" method="POST" id="form-container">
+
+<form action="/profile/edit" method="POST" enctype="multipart/form-data">
+
   <label for="username">Username: </label>
   <input id="username" type="text" name="username">
   <br><br>
@@ -24,10 +28,4 @@
   {{/if}}
   <br><br>
 
-  <button>Create account</button>
-
-  <p class="account-message">
-    Do you already have an account?
-    <a href="/login">Login</a>
-  </p>
 </form>

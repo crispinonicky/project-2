@@ -107,9 +107,9 @@ router.get('/items/:theid', (req, res, next)=>{
 })
 
 
-router.get('/fancypage', (req, res, next)=>{
-  res.render('itemViews/fancy.hbs')
-})
+// router.get('/fancypage', (req, res, next)=>{
+//   res.render('itemViews/fancy.hbs')
+// })
 
 
 router.get('/api/items', (req, res, next) => {

@@ -151,6 +151,10 @@ authRoutes.get("/checkout", ensureLogin.ensureLoggedIn(), (req, res) => {
   res.render("checkout", { user: req.user });
 });
 
+authRoutes.get("/profile", ensureLogin.ensureLoggedIn(), (req, res) => {
+  res.render("profile", { user: req.user });
+});
+
 module.exports = app;
 
 // app.listen(2000);
