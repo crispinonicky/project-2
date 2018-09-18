@@ -27,6 +27,7 @@ router.get("/signup", (req, res, next) => {
     const email = req.body.email;
     const firstname = req.body.firstname;
     const lastname = req.body.lastname;
+    const phone = req.body.phone;
     const address = req.body.address;
   
     if (username === "" || password === "") {
@@ -51,6 +52,7 @@ router.get("/signup", (req, res, next) => {
           email: email,
           firstname: firstname,
           lastname: lastname,
+          phone: phone,
           address: address,
       })
       .then((response)=>{

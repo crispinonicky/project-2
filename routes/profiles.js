@@ -88,6 +88,7 @@ router.post('/profiles/edit/:userID', (req, res, next)=>{
     email: req.body.email,
     firstname: req.body.firstname,
     lastname: req.body.lastname,
+    phone: req.body.phone,
     address: req.body.address,
     // imgName: req.file.originalname
   })

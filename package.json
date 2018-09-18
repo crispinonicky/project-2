@@ -32,5 +32,20 @@
   },
   "devDependencies": {
     "nodemon": "^1.12.1"
-  }
+  },
+  "description": "",
+  "main": "app.js",
+  "bin": {
+    "celebs-and-movies": "seeds.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crispinonicky/project-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crispinonicky/project-2/issues"
+  },
+  "homepage": "https://github.com/crispinonicky/project-2#readme"
 }

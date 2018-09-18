@@ -1,11 +1,46 @@
+
+
+{{#each theList}}
+
+  <a href="/reviews/{{this._id}}">
+
+<h1>{{this.title}}</h1>
+  </a>
+
+<div>
+
+<h3>Posted by {{this.commenter}}</h3>
+
+
 <br>
 
+<h2>{{this.review}}</h2>
 
-This is the reviews page!!!!
+    <img src="{{this.image}}">
 
-woooo
+<br>
 
-        <br>
+<p>
+    Rating:
+{{this.rating}}
+</p>
+
+
+   <form action="/reviews/delete/{{this._id}}" method="POST">
+       <button>Delete This Review</button>
+   </form>
+
+        <a href="/reviews/edit/{{review._id}}">
+            <button>Edit This Review</button>
+        </a>
+<hr>
+
+</div>
+
+
+
+{{/each}}
+
         <a href="/reviews/new">
-            <button>Add a New Menu Item</button>
+            <button>Add a New Review</button>
         </a>
