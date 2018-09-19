@@ -82,4 +82,57 @@ img {
   color: black;
   text-align: left; }
 
+.reviews > a > h1 {
+  padding-left: 5vw; }
+
+.menu {
+  display: flex;
+  flex-wrap: wrap; }
+
+.item-card {
+  width: 29.33333333333333333333vw;
+  height: 33vw;
+  margin-bottom: 0px;
+  padding-left: 2vw;
+  padding-right: 2vw; }
+
+div.item-card > hr {
+  position: relative;
+  bottom: 0;
+  width: 100vw; }
+
+.img-box {
+  width: 20vw;
+  height: 20vh; }
+
+div.img-box > img {
+  display: block;
+  width: 14vw;
+  height: 20vh;
+  margin-right: auto;
+  margin-left: auto; }
+
+div.item-card > p {
+  color: black;
+  height: 1vh; }
+
+.add-item {
+  margin-top: 3vh;
+  margin-bottom: 2vh; }
+
+div.item-card > h3 {
+  padding-left: 4vw; }
+
+.price {
+  margin-top: 5vh; }
+
+.add-to-cart {
+  margin-bottom: 0vh; }
+
+div.hr-box > hr {
+  width: 100vw; }
+
+.description {
+  text-align: left; }
+
 /*# sourceMappingURL=style.css.map */

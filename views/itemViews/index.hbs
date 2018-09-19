@@ -1,22 +1,30 @@
+
+            <a href="/items/new">
+            <button class="add-item">Add a New Menu Item</button>
+        </a>
+
 <div class="menu">
+
 
 {{#each theList}}
 
-<div>
+<div class="item-card">
 
   <a href="/items/{{this._id}}">
 <h3>{{this.name}}</h3>
   </a>
 
+<div class = "img-box">
 <img class = "image-padding" src="{{this.imgPath}}">
+</div>
 
 <br>
 
-<h2>{{this.description}}</h2>
+<p class = "description">{{this.description}}</p>
 
 
 <br>
-
+<div class="hr-box">
 <p class="price">
   Price: 
 ${{this.price}}
@@ -28,9 +36,11 @@ ${{this.price}}
    </form>
 
         <a>
-            <button>Add to Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
         </a>
 <hr>
+
+</div>
 
 </div>
 
@@ -38,8 +48,5 @@ ${{this.price}}
 
 {{/each}}
 
-        <a href="/items/new">
-            <button>Add a New Menu Item</button>
-        </a>
 
         </div>
