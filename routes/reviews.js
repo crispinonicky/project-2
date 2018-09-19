@@ -12,6 +12,9 @@ const uploadCloud = require('../config/cloudinary.js');
     Review.find()
       .then((listOfReviews)=>{
 
+        listOfReviews.updated_at = new Date()
+        console.log("=============================", listOfReviews.updated_at.getDay())
+
         res.render('reviewViews/index',{theList: listOfReviews})
   })
   .catch((err)=>{

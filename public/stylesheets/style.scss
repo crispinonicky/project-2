@@ -2,7 +2,9 @@ body {
   // padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0;
+  width: 100vw;
 }
+
 
 body > a{
   text-decoration: none;
@@ -175,4 +177,65 @@ div.hr-box > hr{
 
 .description{
   text-align: left;
+}
+
+div.reviews > div > p{
+  color: black;
+  text-align: left;
+}
+
+div.single-rev > p{
+  color: black;
+  text-align: left;
+}
+
+div.single-rev > a, h1, h4{
+  padding-left: 5vw;
+}
+
+.reviews{
+  padding-right: 5vw;
+}
+
+
+div.reviews > div > hr{
+  width: 100vw;
+}
+
+.single-rev{
+  padding-right: 5vw;
+}
+
+.reposition > h1{
+  padding-left: 5vw;
+}
+
+// input{
+//   margin-left: 15vw;
+// }
+
+div.profiles > form > p{
+  color: black;
+  text-align: left;
+}
+
+.add-review{
+  margin-top: 3vh;
+  margin-bottom: 2vh;
+}
+
+.single-item > img{
+  padding-left: 5vw;
+}
+
+.back-to-list{
+  padding-left: 5vw;
+}
+
+.checkout{
+  padding-left: 5vw;
+}
+
+form#form-container > label{
+  display: flex;
 }

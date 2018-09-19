@@ -1,3 +1,9 @@
+       <a href="/reviews/new">
+            <button class="add-review">Add a New Review</button>
+        </a>
+
+        <hr>
+
 <div class="reviews">
 
 {{#each theList}}
@@ -9,12 +15,12 @@
 
 <div>
 
-<h3>Posted by {{this.commenter}}</h3>
+<h3>Posted by {{this.commenter}} on {{this.updated_at}}</h3>
 
 
 <br>
 
-<h2>{{this.review}}</h2>
+<p>{{this.review}}</p>
 
 <br>
 
@@ -39,8 +45,6 @@
 
 {{/each}}
 
-        <a href="/reviews/new">
-            <button>Add a New Review</button>
-        </a>
+ 
 
         </div>

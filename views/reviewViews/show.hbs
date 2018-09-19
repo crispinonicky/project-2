@@ -1,34 +1,29 @@
-
+<div class="single-rev">
     <h1>{{review.title}}</h1>
 
 
     <h3>
-    Description: {{review.commenter}}
+    Posted by {{review.commenter}}
 
     </h3>
 
-    <h4>
+    <p>
 {{review.review}}
 
-    </h4>
+    </p>
 
     <h4>
-      {{review.rating}}
+      Rating: {{review.rating}}
     </h4>
 
 
-        <a href="/reviews/edit/{{review._id}}">
-            <button>Edit This Review</button>
-        </a>
+  <button><a href="/reviews/edit/{{review._id}}">Edit This Review</a></button>
 
 
-
-        <a href="">
-            <button>Add to Cart</button>
-        </a>
-
-<br>
+<br><br>
 
                 <a href="/reviews">
            Go back to list
         </a>
+
+        </div>

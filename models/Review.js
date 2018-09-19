@@ -7,6 +7,9 @@ const reviewSchema = new Schema({
   review: String,
   rating: Number
   // imgPath: 
+  
+}, {
+  timestamps: { createdAt: "created_at", updatedAt: "updated_at" }
 });
 
 

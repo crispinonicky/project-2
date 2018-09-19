@@ -1,31 +1,37 @@
+<div class="single-item">
 
     <h1>{{item.name}}</h1>
 
     <img src="{{item.imgPath}}">
 
     <h3>
-    Description: {{item.description}}
+        Description: {{item.description}}
 
     </h3>
 
     <h4>
-    Price: ${{item.price}}
+        Price: ${{item.price}}
 
     </h4>
 
 
-        <a href="/items/edit/{{item._id}}">
-            <button>Edit This Item</button>
-        </a>
+    <button> <a href="/items/edit/{{item._id}}">
+            Edit This Item </a>
+    </button>
 
 
 
+    <button>
         <a href="">
-            <button>Add to Cart</button>
-        </a>
+            Add to Cart </a>
+    </button>
 
-<br>
+    <br><br>
 
-                <a href="/items">
-           Go back to list
+    <div class="back-to-list">
+        <a href="/items">
+            Go back to list
         </a>
+    </div>
+
+</div>

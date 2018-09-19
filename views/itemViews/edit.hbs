@@ -7,18 +7,23 @@ Edit {{theItem.title}}
 
 <label for"">Name: </label>
 <input type="text" name="name" value="{{theItem.name}}">
+    <br> <hr>
 
 <label>Image: </label>
 <input type="file" name="photo" value="{{theItem.imgPath}}">
+    <br> <hr>
 
 <label for"">Description: </label>
-<input type="text" name="description" value="{{theItem.description}}">
+<input type="text" name="description" value="{{theItem.description}}" maxlength="130" width="300px">
 {{!-- 
 <label for"">Ingredients: </label>
 <input type="text" name="ingredients" value="{{theItem.ingredients}}">
  --}}
+     <br> <hr>
+
 <label for"">Price: </label>
 <input type="float" name="price" value="{{theItem.price}}">
+    <br> <hr>
 
 <button>Submit</button>
 
