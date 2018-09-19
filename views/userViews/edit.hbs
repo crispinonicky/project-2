@@ -1,30 +1,35 @@
+<div class="profiles">
+
 <h1>
 Edit Your Profile
 </h1>
 
 
 <form action="/profiles/edit/{{user._id}}" method="POST">
-
+<b>
   <label for="username">Username: </label>
   <input type="text" name="username" value="{{user.username}}">
-  <br><br>
+  <hr>
   {{!-- <label for="password">Password: </label>
   <input type="password" name="password">
   <br><br> --}}
-  <label for="email">Email: </label>
-  <input type="text" name="email" value="{{user.email}}">
-  <br><br>
   <label for="firstname">First name: </label>
   <input type="text" name="firstname" value="{{user.firstname}}">
-  <br><br>
+  <br> <hr>
   <label for="lastname">Last name: </label>
   <input type="text" name="lastname" value="{{user.lastname}}">
-  <br><br>
+  <br> <hr>
   <label for="phone">Phone Number: </label>
   <input type="text" name="phone" value="{{user.phone}}">
-  <br><br>
+  <br> <hr>
   <label for="address">Address: </label>
   <input type="text" name="address" value="{{user.address}}">
+    <br> <hr>
+
+    <label for="email">Email: </label>
+  <input type="text" name="email" value="{{user.email}}">
+  <br>  <hr>
+  </b>
 
   {{#if message}}
     <div class="error-message">{{ message }}</div>
@@ -35,3 +40,5 @@ Edit Your Profile
 
 
 </form>
+
+</div>

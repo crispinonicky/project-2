@@ -1,13 +1,17 @@
+<div class ="profiles">
+
 <h1>Your Profile</h1>
 
-<p>Username: {{theUser.username}}</p>
-<p>First Name: {{theUser.firstname}}</p>
-<p>Last Name: {{theUser.lastname}}</p>
-<p>Phone Number: {{theUser.phone}}</p>
-<p>Address: {{theUser.address}}</p>
-<p>Email: {{theUser.email}}</p>
+<p><b>Username:</b> {{theUser.username}}</p><hr>
+<p><b>First Name:</b> {{theUser.firstname}}</p><hr>
+<p><b>Last Name:</b> {{theUser.lastname}}</p><hr>
+<p><b>Phone Number: </b>{{theUser.phone}}</p><hr>
+<p><b>Address:</b> {{theUser.address}}</p><hr>
+<p><b>Email:</b> {{theUser.email}}</p><hr>
 
 
         <a href="/profiles/edit/{{theUser._id}}">
             <button>Update Your Profile</button>
         </a>
+
+</div>

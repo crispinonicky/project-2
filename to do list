@@ -1,10 +1,24 @@
 1. Create the 3rd model for the reviews page, and make it so
 it's possible to post reviews.
 
+                         ^
+                         |
+                         |
+                         | 
+                         |
+                         |
+                      DONE YAY
+
+
 2. Make the orders page work (this will probably be the hardest
 part)
-- Make an option for carryout
-- Make an option for delivery 
+
+1. Push item/price into array
+2. Have flash message work to show it is added to checkout
+3. Have items appear on separate checkout page
+4. Calculate total price from all the menu items
+5. Create an option for either carryout or delivery
+6. Create an option to pay in cash or credit (if time allows for it)
 
 3/4. Make the website pretty 
 

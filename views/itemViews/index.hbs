@@ -1,4 +1,4 @@
-
+<div class="menu">
 
 {{#each theList}}
 
@@ -8,17 +8,16 @@
 <h3>{{this.name}}</h3>
   </a>
 
-<img src="{{this.imgPath}}">
+<img class = "image-padding" src="{{this.imgPath}}">
 
 <br>
 
 <h2>{{this.description}}</h2>
 
-    <img src="{{this.image}}">
 
 <br>
 
-<p>
+<p class="price">
   Price: 
 ${{this.price}}
 </p>
@@ -42,3 +41,5 @@ ${{this.price}}
         <a href="/items/new">
             <button>Add a New Menu Item</button>
         </a>
+
+        </div>

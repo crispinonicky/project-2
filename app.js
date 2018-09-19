@@ -67,35 +67,6 @@ passport.deserializeUser((id, cb) => {
   });
 });
 
-// passport.use(new GoogleStrategy({
-//   clientID: process.env.google_client_id,
-//   clientSecret: process.env.google_client_secret,
-//   callbackURL: "/auth/google/callback"
-// }, (accessToken, refreshToken, profile, done) => {
-//   console.log(profile)
-//   User.findOne({ googleID: profile.id })
-//   .then((user, err) => {
-//     if (err) {
-//       return done(err);
-//     }
-//     if (user) {
-//       return done(null, user);
-//     }
-
-//     const newUser = new User({
-//       googleID: profile.id
-//     });
-
-//     newUser.save()
-//     .then(user => {
-//       done(null, newUser);
-//     })
-//   })
-//   .catch(error => {
-//     console.log(error)
-//   })
-
-// }));
 
 app.use(flash());
 
@@ -128,15 +99,15 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 
 // default value for title local
-app.locals.title = 'Mario\'s Italian Restaurant';
+app.locals.title = 'Vita\'s Italian Restaurant';
 
 
 
 const index = require('./routes/index');
 app.use('/', index);
 
-const orderroutesFile = require('./routes/orders');
-app.use('/', orderroutesFile);
+// const orderroutesFile = require('./routes/orders');
+// app.use('/', orderroutesFile);
 
 const itemroutesFile = require('./routes/items');
 app.use('/', itemroutesFile);
@@ -144,8 +115,8 @@ app.use('/', itemroutesFile);
 const authRoutes = require('./routes/auth-routes');
 app.use('/', authRoutes);
 
-const charactersroutesFile = require('./routes/characters');
-app.use('/', charactersroutesFile);
+// const charactersroutesFile = require('./routes/characters');
+// app.use('/', charactersroutesFile);
 
 const profileRoutes = require('./routes/profiles');
 app.use('/', profileRoutes);
