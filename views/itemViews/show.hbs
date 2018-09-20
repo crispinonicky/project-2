@@ -21,10 +21,10 @@
 
 
 
-    <button>
-        <a href="">
-            Add to Cart </a>
-    </button>
+<form action="/orders/create" method="post">
+  <input type="hidden" name="item" value="{{item._id}}"  >
+    <button  type="submit" class="add-to-cart">Add to Cart</button>
+</form>
 
     <br><br>
 

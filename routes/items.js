@@ -9,7 +9,7 @@ const uploadCloud = require('../config/cloudinary.js');
   router.get('/items', (req, res, next) => {
     Item.find()
       .then((listOfItems)=>{
-
+      
         res.render('itemViews/index',{theList: listOfItems})
   })
   .catch((err)=>{

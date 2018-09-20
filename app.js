@@ -106,6 +106,10 @@ app.locals.title = 'Vita\'s Italian Restaurant';
 const index = require('./routes/index');
 app.use('/', index);
 
+
+const checkouts = require('./routes/checkouts');
+app.use('/', checkouts);
+
 // const orderroutesFile = require('./routes/orders');
 // app.use('/', orderroutesFile);
 
@@ -134,6 +138,9 @@ authRoutes.get("/checkout", ensureLogin.ensureLoggedIn(), (req, res) => {
 authRoutes.get("/profile", ensureLogin.ensureLoggedIn(), (req, res) => {
   res.render("profile", { user: req.user });
 });
+
+
+
 
 module.exports = app;
 

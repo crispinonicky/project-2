@@ -33,14 +33,14 @@
 ${{this.price}}
 </p>
 
-
    <form action="/items/delete/{{this._id}}" method="POST">
        <button>Delete This Menu Item</button>
    </form>
 
-        <a>
-            <button class="add-to-cart">Add to Cart</button>
-        </a>
+<form action="/orders/create" method="post">
+  <input type="hidden" name="item" value="{{this._id}}"  >
+    <button  type="submit" class="add-to-cart">Add to Cart</button>
+</form>
 <hr>
 
 </div>

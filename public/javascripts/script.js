@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
   document.getElementById('fetch-movies').onclick = fetchAllMovies;
   
   

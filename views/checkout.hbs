@@ -10,8 +10,18 @@ and have it delivered straight to your doorstep!
     To learn more, take a look at our <a href="/items">menu</a>
   </div>
 {{/if}}
+<br>
+<hr>
 
-<hr><br>
+<div>
+  {{#each orders}}
+    {{#each list}}
+        {{this.name}} - ${{ this.price }} <hr>
+    {{/each}}
 
+  {{/each}}
+</div>
+
+<h1>TOTAL PRICE: ${{total}}</h1>
 
 </div>
