@@ -16,7 +16,11 @@ and have it delivered straight to your doorstep!
 <div>
   {{#each orders}}
     {{#each list}}
-        {{this.name}} - ${{ this.price }} <hr>
+        {{this.name}} - ${{ this.price }} 
+           <form action="/orders/delete/{{this._id}}" method="POST">
+       <button>Delete This Menu Item</button>
+   </form>
+   <hr>
     {{/each}}
 
   {{/each}}

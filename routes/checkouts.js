@@ -8,27 +8,58 @@ router.post('/orders/create', (req, res, next) => {
   const newOrder = new Order({
     customer: req.user._id,
     list: []
+    
   })
 
   newOrder.list.push(req.body.item)
+  // console.log(Order)
+  
+  // console.log(list);
+  
   
   newOrder.save()
   .then(() => {
+    
     res.redirect('/items')
-    window.alert("sometext");
   })
   .catch(err => next(err))
 })
 
+router.post('/orders/delete/:id', (req, res, next)=>{
+
+  Order.findByIdAndRemove(req.params.id)
+  .then((response)=>{
+    res.redirect('/checkout')
+  })
+  .catch((err)=>{
+    next(err)
+  })
+})
+
+//   Order.findByIdAndRemove(req.params.id)
+//   .then((theOrderWeGet)=>{
+//     let index = theOrderWeGet.items.indexOf()
+//     theOrderWeGet.items.splice(index, 1)
+//     theOrderWeGet.save()
+//     .then((resp)=>{
+//       res.redirect('/checkout')
+//     })
+//     .catch((err)=>{
+//       next(err)
+//   })
+//   .catch((err)=>{
+//     next(err)
+//   })
+// })
 
 router.get('/checkout', (req,res,next) => {
   Order.find({customer: req.user._id}).populate('list')
   .then(ordersFromDb => {
 
     const prices = [];
-
+    
     ordersFromDb.forEach(oneOrder => {
-     oneOrder.list.forEach(oneItem => {
+      oneOrder.list.forEach(oneItem => {
         prices.push(oneItem.price)
       })
     })

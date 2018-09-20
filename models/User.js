@@ -10,7 +10,7 @@ const userSchema = new Schema({
   lastname: String,
   phone: String,
   address: String,
-  order: Array,
+  order: {type: Schema.Types.ObjectId, ref:"Order"},
   history: Array,
   admin: Boolean
 

@@ -239,3 +239,17 @@ div.profiles > form > p{
 form#form-container > label{
   display: flex;
 }
+
+.error > p{
+  color: black;
+  text-align: left;
+  padding-right: 5vw;
+}
+
+div.profiles.edit-review > form > label{
+  display: flex;
+}
+
+div.profiles.create-review > form > label{
+  display: flex;
+}

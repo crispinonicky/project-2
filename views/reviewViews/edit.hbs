@@ -1,4 +1,4 @@
-<div class="profiles">
+<div class="profiles edit-review">
 
 <h1>
 Edit Your Review
@@ -9,15 +9,18 @@ Edit Your Review
 
 <label for"">Name: </label>
 <input type="text" name="commenter" value="{{theReview.commenter}}">
-
+<br><hr>
 <label for"">Headline: </label>
 <input type="text" name="title" value="{{theReview.title}}">
+<br><hr>
 
 <label for"">Review: </label>
-<input type="text" name="review" value="{{theReview.review}}">
+<input class="big-box" type="text" name="review" value="{{theReview.review}}" size = "150">
+<br><hr>
 
-<label for"">Rating: </label>
+<label for"">Rating (out of 5): </label>
 <input type="number" name="rating" value="{{theReview.rating}}">
+<br><hr>
 
 <button>Submit</button>
 

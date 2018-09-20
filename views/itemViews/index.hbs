@@ -1,3 +1,4 @@
+
 <div class="menu-page">
 
             <a href="/items/new">
@@ -10,6 +11,13 @@
 
 
 {{#each theList}}
+
+  {{!-- <script type="text/javascript">
+            function Warn() {
+               alert ("This is a warning message!");
+               document.write ("This is a warning message!");
+            }
+      </script> --}}
 
 <div class="item-card">
 
@@ -38,9 +46,14 @@ ${{this.price}}
    </form>
 
 <form action="/orders/create" method="post">
-  <input type="hidden" name="item" value="{{this._id}}"  >
+  <input type="hidden" name="item" value="{{this._id}}">
     <button  type="submit" class="add-to-cart">Add to Cart</button>
 </form>
+
+   {{!-- {{#if message}}
+        <div class="error-message">{{ message }}</div>
+      {{/if}} --}}
+
 <hr>
 
 </div>

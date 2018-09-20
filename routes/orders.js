@@ -47,17 +47,17 @@ router.post('/orders/create', (req, res, next)=>{
 
 
 
-router.post('/orders/delete/:id', (req, res, next)=>{
+// router.post('/orders/delete/:id', (req, res, next)=>{
 
 
-  Order.findByIdAndRemove(req.params.id)
-  .then((response)=>{
-    res.redirect('/orders')
-  })
-  .catch((err)=>{
-    next(err)
-  })
-})
+//   Order.findByIdAndRemove(req.params.id)
+//   .then((response)=>{
+//     res.redirect('/orders')
+//   })
+//   .catch((err)=>{
+//     next(err)
+//   })
+// })
 
 router.get('/orders/edit/:orderID', (req, res, next)=>{
   Order.findById(req.params.orderID)
