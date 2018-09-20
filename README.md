@@ -1,1 +1,3 @@
-# proj-2
+Online demo:
+
+https://vitas-app.herokuapp.com/
